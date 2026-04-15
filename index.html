@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Portfolio Interattivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Ciao, sono Dalia</h1>
+        <p>Sviluppatore / Designer / Creativo</p>
+    </header>
+
+    <section id="progetti">
+        <h2>I miei Progetti</h2>
+        <div class="grid">
+            <div class="card" onclick="this.classList.toggle('active')">
+                <h3>Progetto 1</h3>
+                <p>Cliccami per vedere l'effetto interattivo!</p>
+                <span class="dettaglio">Dettagli: Realizzato con HTML e CSS.</span>
+            </div>
+            <div class="card" onclick="this.classList.toggle('active')">
+                <h3>Progetto 2</h3>
+                <p>Un altro esempio di card.</p>
+                <span class="dettaglio">Dettagli: Layout responsive.</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contattami su: <a href="mailto:email@esempio.com">email@esempio.com</a></p>
+    </footer>
+
+</body>
+</html>
