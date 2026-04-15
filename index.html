@@ -3,68 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Hardware Design & Test Engineer</title>
+    <title>DALIA ROSSI | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <header class="bento-item hero">
-            <div class="hero-content">
-                <img src="Ritratto professionale in ufficio.jpg" alt="Foto Profilo" class="profile-img">
-                <div class="hero-text">
-                    <h1>Specialista in Hardware Design <br>& Automated Test Systems</h1>
-                    <p>Progettazione elettronica, sistemi Boundary Scan (JTAG) e automazione industriale.</p>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">DALIA ROSSI</span>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/tuo-username" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dalia-rossi-74ba99146" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <header id="home" class="bento-item hero">
+            <img src="Ritratto professionale in ufficio.jpg" alt="Elena Rossi" class="profile-img">
+            <div class="hero-text">
+                <h1>DALIA ROSSI</h1>
+                <h2>Electronic Hardware Design & <br>Automated Test Systems Specialist</h2>
+                <p>Specializzata nella progettazione hardware elettronica e nello sviluppo di sistemi di test automatizzati, con esperienza in soluzioni di collaudo basate su Boundary Scan (JTAG) utilizzando strumenti come Cascon e JTAG Provision.</p>
             </div>
         </header>
 
         <section class="bento-item hardware">
             <h3>Electronic Hardware Design</h3>
-            <p>Progettazione schemi e PCB ottimizzati per la testabilità.</p>
-            <div class="tech-tag">Altium / KiCad</div>
+            <p>Animated schematic design and PCB</p>
+            <div class="icon-placeholder">
+                <i class="fas fa-microchip fa-4x" style="color: #007bff; opacity: 0.3;"></i>
+                </div>
+            <a href="#" class="arrow-btn blue"><i class="fas fa-arrow-right"></i></a>
         </section>
 
         <section class="bento-item test-systems">
             <h3>Automated Test Systems</h3>
-            <p>Sviluppo soluzioni di collaudo con LabVIEW e TestStand.</p>
-            <div class="status">● Active</div>
+            <p>Active with automated test interface</p>
+            <div class="nested-grid">
+                <div class="sub-card">
+                    <i class="fas fa-network-wired fa-2x"></i>
+                    <span>JTAG Provision</span>
+                </div>
+                <div class="sub-card">
+                    <i class="fas fa-flask fa-2x"></i>
+                    <span>LabVIEW/TestStand</span>
+                </div>
+            </div>
+            <a href="#" class="arrow-btn green"><i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <section class="bento-item code-card">
+            <h3>Honticet (Esempio Codice)</h3>
+            <pre><code>public starifier void Sotebinooker examples, {
+  if (once == bases:straee[]) ++) {
+    ...
+  }
+}</code></pre>
+            <a href="#" class="arrow-btn dark"><i class="fas fa-arrow-right"></i></a>
         </section>
 
         <section class="bento-item jtag">
             <h3>Boundary Scan (JTAG)</h3>
-            <p>Esperienza avanzata con Cascon e JTAG Provision per troubleshooting hardware.</p>
+            <p>Esperienza avanzata e troubleshooting.</p>
+            <i class="fas fa-server fa-5x jtag-icon"></i>
+            <a href="#" class="arrow-btn purple"><i class="fas fa-arrow-right"></i></a>
         </section>
 
         <section class="bento-item skills">
-            <h3>Core Skills</h3>
-            <div class="skills-grid">
-                <span>🐍 Python</span>
-                <span>⚙️ C++</span>
-                <span>🤖 Firmware</span>
-                <span>📊 Optimization</span>
+            <h3>Skills</h3>
+            <div class="skills-icons">
+                <div class="skill-icon"><i class="fab fa-python fa-3x" style="color: #306998"></i><span>Python</span></div>
+                <div class="skill-icon"><i class="fas fa-c fa-3x" style="color: #00599C"></i><span>C++</span></div>
+                <div class="skill-icon"><i class="fas fa-microchip fa-3x" style="color: #444"></i><span>Firmware</span></div>
             </div>
+            <a href="#" class="arrow-btn yellow"><i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <section class="bento-item optimization">
+            <h3>Troubleshooting & Optimization</h3>
+            <ul>
+                <li>Personalites and Evolutions</li>
+                <li>Troubleshooting & Optimization</li>
+                <li>Sendation Methods</li>
+            </ul>
+            <a href="#" class="arrow-btn green-dark"><i class="fas fa-arrow-right"></i></a>
         </section>
 
         <section class="bento-item languages">
-            <h3>Lingue</h3>
-            <ul>
-                <li>🇮🇹 Italiano (Madrelingua)</li>
-                <li>🇬🇧 Inglese (Fluente)</li>
-                <li>🇪🇸 Spagnolo (Ottimo)</li>
-            </ul>
+            <h3>Languages</h3>
+            <div class="lang-bars">
+                <div class="lang"><span>🇮🇹 Italian</span> <div class="bar-bg"><div class="bar" style="width: 100%;"></div></div></div>
+                <div class="lang"><span>🇬🇧 English</span> <div class="bar-bg"><div class="bar" style="width: 90%;"></div></div></div>
+                <div class="lang"><span>🇪🇸 Spanish</span> <div class="bar-bg"><div class="bar" style="width: 80%;"></div></div></div>
+            </div>
         </section>
 
-        <footer class="bento-item contact">
-            <h3>Contattami</h3>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="mailto:tua.email@esempio.it">Invia un'email</a>
+        <section id="contact" class="bento-item contact-section">
+            <h3>Contact</h3>
+            <p>Use Electronic Hardware Design & Automated Test Systems Specialist.</p>
+            <div class="social-pills" style="margin-bottom: 20px;">
+                <a href="https://www.linkedin.com/in/dalia-rossi-74ba99146" target="_blank" style="background: #0077b5; color: white; padding: 10px 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fab fa-linkedin"></i> Collegati su LinkedIn
+                </a>
             </div>
-        </footer>
-    </div>
+            <form>
+                <input type="text" placeholder="Name *" required>
+                <input type="text" placeholder="Subject *" required>
+                <textarea placeholder="Message" rows="4"></textarea>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </section>
 
+    </main>
+
+    <footer class="main-footer">
+        <a href="https://www.linkedin.com/in/dalia-rossi-74ba99146" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/tuo-username" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </footer>
+    
 </body>
 </html>
