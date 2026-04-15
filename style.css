@@ -10,37 +10,8 @@ body {
     background-color: #f8f9fa;
     color: #1d1d1f;
     line-height: 1.5;
-    padding-top: 80px; /* Spazio per la navbar */
+    padding-top: 80px;
 }
-
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-ul { list-style: none; }
-
-/* --- NAVBAR (come nell'immagine) --- */
-.navbar {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo { font-weight: 700; font-size: 1.2rem; }
-.nav-links { display: flex; gap: 20px; align-items: center; }
-.nav-links a:hover { color: #007bff; }
 
 /* --- CONTAINER BENTO GRID --- */
 .container {
@@ -48,123 +19,59 @@ ul { list-style: none; }
     width: 90%;
     margin: 40px auto;
     display: grid;
-    /* Definizione delle colonne (come nel mockup) */
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(180px, auto);
+    grid-auto-rows: minmax(200px, auto);
     gap: 20px;
 }
 
 /* STILE BASE DEGLI ITEM BENTO */
 .bento-item {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 30px;
     border: 1px solid #e1e4e8;
-    position: relative; /* Per posizionare la freccia */
+    position: relative;
+    overflow: hidden; /* Importante per contenere le immagini di sfondo */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .bento-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
-h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
-p { color: #6e6e73; font-size: 0.95rem; margin-bottom: 15px; }
+/* --- GESTIONE IMMAGINI DI SFONDO --- */
 
-/* --- POSIZIONAMENTO SPECIFICO (Layout) --- */
-.hero { grid-column: span 4; display: flex; align-items: center; gap: 30px; }
-.hardware { grid-column: span 2; grid-row: span 2; }
-.test-systems { grid-column: span 2; }
-.code-card { grid-column: span 2; background-color: #0d1117; color: #c9d1d9; } /* Dark theme */
-.jtag { grid-column: span 2; grid-row: span 2; }
-.skills { grid-column: span 1; }
-.optimization { grid-column: span 2; }
-.languages { grid-column: span 1; }
-.contact-section { grid-column: span 4; }
-
-/* --- DETTAGLI DEGLI ELEMENTI --- */
-
-/* Hero */
-.profile-img {
-    width: 150px; height: 150px;
-    border-radius: 50%; object-fit: cover;
-    border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.hero h1 { font-size: 2.5rem; font-weight: 800; }
-.hero h2 { font-size: 1.2rem; font-weight: 500; color: #6e6e73; margin-bottom: 10px; }
-
-/* Icon placeholders (per hardware/jtag) */
-.icon-placeholder, .jtag-icon {
-    display: flex; justify-content: center; align-items: center;
-    margin-top: 20px; height: 150px;
-}
-.jtag-icon { color: #6f42c1; opacity: 0.2; }
-
-/* Nested Grid (Test Systems) */
-.nested-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
-.sub-card {
-    background: #f1f8ff; border-radius: 10px; padding: 15px;
-    text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; gap: 5px;
+/* Blocco Hardware: Usiamo l'immagine del PCB che abbiamo creato */
+.hardware { 
+    grid-column: span 2; 
+    grid-row: span 2;
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                      url('Images/pcb-schematic.jpg'); 
+    background-size: cover;
+    background-position: center;
 }
 
-/* Code Card */
-.code-card h3 { color: #fff; }
-pre { background: #161b22; padding: 15px; border-radius: 10px; font-size: 0.8rem; overflow-x: auto; }
-
-/* Skills Icons */
-.skills-icons { display: flex; justify-content: space-around; margin-top: 20px; text-align: center; }
-.skill-icon { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 0.8rem; }
-
-/* Optimization List */
-.optimization ul { margin-top: 10px; color: #6e6e73; }
-.optimization li { margin-bottom: 5px; position: relative; padding-left: 20px; }
-.optimization li::before { content: "•"; color: #28a745; position: absolute; left: 0; }
-
-/* Language Bars */
-.lang-bars { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-.lang { font-size: 0.85rem; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.bar-bg { background: #e1e4e8; height: 8px; border-radius: 4px; flex-grow: 1; }
-.bar { background: #fd7e14; height: 100%; border-radius: 4px; }
-
-/* Contact Form */
-.contact-section form { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
-.contact-section input, .contact-section textarea {
-    grid-column: span 2; padding: 12px; border: 1px solid #e1e4e8; border-radius: 8px; font-family: inherit;
-}
-.contact-section input:first-child, .contact-section input:nth-child(2) { grid-column: span 1; }
-.send-btn {
-    grid-column: span 2; background-color: #007bff; color: white;
-    padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;
+/* Blocco JTAG: Immagine tecnologica/astratta */
+.jtag { 
+    grid-column: span 2; 
+    grid-row: span 2; 
+    background-image: linear-gradient(rgba(243, 229, 245, 0.85), rgba(243, 229, 245, 0.85)), 
+                      url('Images/jtag-detail.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* --- PULSANTI A FRECCIA (Posizionamento) --- */
-.arrow-btn {
-    position: absolute; bottom: 20px; right: 20px;
-    width: 35px; height: 35px; border-radius: 50%;
-    display: flex; justify-content: center; align-items: center;
-    color: white; font-size: 0.8rem;
-}
-/* Colori dei pulsanti basati sulla sezione */
-.arrow-btn.blue { background-color: #007bff; }
-.arrow-btn.green { background-color: #28a745; }
-.arrow-btn.dark { background-color: #24292e; }
-.arrow-btn.purple { background-color: #6f42c1; }
-.arrow-btn.yellow { background-color: #ffc107; color: #1d1d1f; }
-.arrow-btn.green-dark { background-color: #1e7e34; }
-
-/* --- FOOTER --- */
-.main-footer { text-align: center; padding: 40px; color: #6e6e73; border-top: 1px solid #e1e4e8; display: flex; justify-content: center; gap: 20px; }
-.main-footer a { font-weight: 600; color: #007bff; }
-
-/* --- RESPONSIVE (per cellulari) --- */
-@media (max-width: 900px) {
-    .container { grid-template-columns: 1fr 1fr; }
-    .hero, .contact-section { grid-column: span 2; }
-    .hero { flex-direction: column; text-align: center; }
+/* --- ALTRI BLOCCHI (Colori Solid) --- */
+.hero { 
+    grid-column: span 4; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+    background: white;
 }
 
-@media (max-width: 600px) {
-    .container { grid-template-columns: 1fr; }
-    .hero, .hardware, .jtag, .optimization, .contact-section { grid-column: span 1; }
-}
+.test-systems { grid-column: span 2; background-color: #e8f5
