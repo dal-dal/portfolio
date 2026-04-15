@@ -3,36 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Portfolio Interattivo</title>
+    <title>Portfolio | Hardware Design & Test Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Ciao, sono Dalia</h1>
-        <p>Sviluppatore / Designer / Creativo</p>
-    </header>
-
-    <section id="progetti">
-        <h2>I miei Progetti</h2>
-        <div class="grid">
-            <div class="card" onclick="this.classList.toggle('active')">
-                <h3>Progetto 1</h3>
-                <p>Cliccami per vedere l'effetto interattivo!</p>
-                <span class="dettaglio">Dettagli: Realizzato con HTML e CSS.</span>
+    <div class="container">
+        <header class="bento-item hero">
+            <div class="hero-content">
+                <img src="Ritratto professionale in ufficio.jpg" alt="Foto Profilo" class="profile-img">
+                <div class="hero-text">
+                    <h1>Specialista in Hardware Design <br>& Automated Test Systems</h1>
+                    <p>Progettazione elettronica, sistemi Boundary Scan (JTAG) e automazione industriale.</p>
+                </div>
             </div>
-            <div class="card" onclick="this.classList.toggle('active')">
-                <h3>Progetto 2</h3>
-                <p>Un altro esempio di card.</p>
-                <span class="dettaglio">Dettagli: Layout responsive.</span>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <footer>
-        <p>Contattami su: <a href="mailto:email@esempio.com">email@esempio.com</a></p>
-    </footer>
+        <section class="bento-item hardware">
+            <h3>Electronic Hardware Design</h3>
+            <p>Progettazione schemi e PCB ottimizzati per la testabilità.</p>
+            <div class="tech-tag">Altium / KiCad</div>
+        </section>
+
+        <section class="bento-item test-systems">
+            <h3>Automated Test Systems</h3>
+            <p>Sviluppo soluzioni di collaudo con LabVIEW e TestStand.</p>
+            <div class="status">● Active</div>
+        </section>
+
+        <section class="bento-item jtag">
+            <h3>Boundary Scan (JTAG)</h3>
+            <p>Esperienza avanzata con Cascon e JTAG Provision per troubleshooting hardware.</p>
+        </section>
+
+        <section class="bento-item skills">
+            <h3>Core Skills</h3>
+            <div class="skills-grid">
+                <span>🐍 Python</span>
+                <span>⚙️ C++</span>
+                <span>🤖 Firmware</span>
+                <span>📊 Optimization</span>
+            </div>
+        </section>
+
+        <section class="bento-item languages">
+            <h3>Lingue</h3>
+            <ul>
+                <li>🇮🇹 Italiano (Madrelingua)</li>
+                <li>🇬🇧 Inglese (Fluente)</li>
+                <li>🇪🇸 Spagnolo (Ottimo)</li>
+            </ul>
+        </section>
+
+        <footer class="bento-item contact">
+            <h3>Contattami</h3>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="mailto:tua.email@esempio.it">Invia un'email</a>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
