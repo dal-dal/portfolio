@@ -6,9 +6,7 @@
     <title>DALIA ROSSI | Portfolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,7 +28,7 @@
     <main class="container">
         
         <header id="home" class="bento-item hero">
-            <img src="Ritratto professionale in ufficio.jpg" alt="Elena Rossi" class="profile-img">
+            <img src="Images/Ritratto professionale in ufficio.jpg" alt="Dalia Rossi" class="profile-img">
             <div class="hero-text">
                 <h1>DALIA ROSSI</h1>
                 <h2>Electronic Hardware Design & <br>Automated Test Systems Specialist</h2>
@@ -41,24 +39,18 @@
         <section class="bento-item hardware">
             <h3>Electronic Hardware Design</h3>
             <p>Animated schematic design and PCB</p>
-            <div class="icon-placeholder">
-                <i class="fas fa-microchip fa-4x" style="color: #007bff; opacity: 0.3;"></i>
-                </div>
+            <div class="image-gallery">
+                <img src="Images/BoardScheme.png" alt="Schematic Design" class="gallery-img">
+                <img src="Images/BlueBoard.png" alt="PCB Design" class="gallery-img">
+            </div>
             <a href="#" class="arrow-btn blue"><i class="fas fa-arrow-right"></i></a>
         </section>
 
         <section class="bento-item test-systems">
             <h3>Automated Test Systems</h3>
             <p>Active with automated test interface</p>
-            <div class="nested-grid">
-                <div class="sub-card">
-                    <i class="fas fa-network-wired fa-2x"></i>
-                    <span>JTAG Provision</span>
-                </div>
-                <div class="sub-card">
-                    <i class="fas fa-flask fa-2x"></i>
-                    <span>LabVIEW/TestStand</span>
-                </div>
+            <div class="test-visual">
+                <img src="Images/GreenLabView.png" alt="LabVIEW Interface" class="bento-image">
             </div>
             <a href="#" class="arrow-btn green"><i class="fas fa-arrow-right"></i></a>
         </section>
@@ -76,7 +68,9 @@
         <section class="bento-item jtag">
             <h3>Boundary Scan (JTAG)</h3>
             <p>Esperienza avanzata e troubleshooting.</p>
-            <i class="fas fa-server fa-5x jtag-icon"></i>
+            <div class="jtag-visual">
+                <img src="Images/PurpleCore.png" alt="JTAG Analysis" class="bento-image">
+            </div>
             <a href="#" class="arrow-btn purple"><i class="fas fa-arrow-right"></i></a>
         </section>
 
@@ -113,7 +107,7 @@
             <h3>Contact</h3>
             <p>Use Electronic Hardware Design & Automated Test Systems Specialist.</p>
             <div class="social-pills" style="margin-bottom: 20px;">
-                <a href="https://www.linkedin.com/in/dalia-rossi-74ba99146" target="_blank" style="background: #0077b5; color: white; padding: 10px 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;">
+                <a href="https://www.linkedin.com/in/dalia-rossi-74ba99146" target="_blank" class="linkedin-pill">
                     <i class="fab fa-linkedin"></i> Collegati su LinkedIn
                 </a>
             </div>
@@ -121,20 +115,4 @@
                 <input type="text" placeholder="Name *" required>
                 <input type="text" placeholder="Subject *" required>
                 <textarea placeholder="Message" rows="4"></textarea>
-                <button type="submit" class="send-btn">Send</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer class="main-footer">
-        <a href="https://www.linkedin.com/in/dalia-rossi-74ba99146" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/tuo-username" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-    </footer>
-    
-</body>
-</html>
+                <button type="submit" class="
