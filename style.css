@@ -1,21 +1,32 @@
-/* --- RESET --- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* --- 1. BASE E CARATTERI --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #f8f9fa;
-    padding-top: 100px;
+    color: #1d1d1f;
+    line-height: 1.6;
+    padding-top: 90px; /* Spazio per la navbar fissa */
 }
 
-/* --- NAVBAR FIX --- */
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- 2. NAVBAR MODERNA --- */
 .navbar {
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
     position: fixed;
     top: 0; width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
     z-index: 1000;
 }
 
@@ -25,62 +36,153 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.nav-links a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
+.logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
 
-/* --- GRID --- */
+.nav-links { display: flex; align-items: center; gap: 20px; }
+.nav-links a { font-weight: 600; font-size: 0.9rem; color: #444; }
+.nav-links a:hover { color: #007bff; }
+
+/* --- 3. BENTO GRID LAYOUT --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(180px, auto);
     gap: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
 
 .bento-item {
     background: white;
-    border-radius: 24px;
-    padding: 25px;
-    border: 1px solid #eee;
-    overflow: hidden;
-}
-
-/* --- FIX IMMAGINI --- */
-.profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #eee; /* Grigio se non carica */
-}
-
-/* Classi per le immagini che hai caricato */
-.bento-image, .gallery-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 15px;
-    display: block;
-}
-
-.image-gallery {
+    border-radius: 28px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
 }
 
-.gallery-img { width: 48%; }
+.bento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
 
-/* --- LAYOUT --- */
-.hero { grid-column: span 4; display: flex; gap: 30px; align-items: center; }
+h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+p { color: #636366; font-size: 0.95rem; }
+
+/* --- 4. SEZIONI SPECIFICHE --- */
+
+/* Hero */
+.hero { grid-column: span 4; flex-direction: row; align-items: center; gap: 40px; }
+.profile-img { 
+    width: 160px; height: 160px; 
+    border-radius: 40px; object-fit: cover; 
+    background: #f0f0f0;
+}
+.hero-text h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
+.hero-text h2 { font-size: 1.2rem; font-weight: 500; color: #007bff; margin-bottom: 15px; }
+
+/* Hardware & JTAG (Immagini) */
 .hardware { grid-column: span 2; }
-.test-systems { grid-column: span 2; background: #f3e5f5; }
 .jtag { grid-column: span 2; }
-.contact-section { grid-column: span 4; }
+.bento-image, .gallery-img { 
+    width: 100%; border-radius: 18px; margin-top: 15px; display: block; 
+}
+.image-gallery { display: flex; gap: 12px; }
+.gallery-img { width: 50%; }
 
-/* ... resto degli stili per form e bottoni ... */
+/* Test Systems (Viola) */
+.test-systems { grid-column: span 2; background-color: #f3e5f5; border: none; }
+
+/* Code (Scuro) */
+.code-card { grid-column: span 2; background-color: #0d1117; color: #c9d1d9; }
+pre { background: #161b22; padding: 15px; border-radius: 12px; font-size: 0.85rem; margin-top: 10px; overflow-x: auto; }
+
+/* Troubleshooting (Lista) */
+.optimization { grid-column: span 2; }
+.optimization ul { list-style: none; margin-top: 15px; }
+.optimization li { margin-bottom: 8px; font-weight: 500; padding-left: 20px; position: relative; }
+.optimization li::before { content: "•"; color: #007bff; position: absolute; left: 0; font-weight: bold; }
+
+/* --- 5. LINGUE (Barre di progresso) --- */
+.languages { grid-column: span 2; }
+.lang-bars { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+.lang { display: flex; align-items: center; gap: 15px; }
+.lang span { min-width: 90px; font-weight: 600; font-size: 0.9rem; }
+.bar-bg { background: #eee; height: 10px; border-radius: 5px; flex-grow: 1; overflow: hidden; }
+.bar { background: #007bff; height: 100%; border-radius: 5px; }
+
+/* --- 6. CONTATTI (Allineamento Flexbox) --- */
+.contact-section { grid-column: span 4; }
+.contact-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+
+.form-row { 
+    display: flex; gap: 15px; 
+}
+.form-row input { flex: 1; }
+
+input, textarea {
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: #fcfcfc;
+}
+
+input:focus, textarea:focus { border-color: #007bff; outline: none; background: #fff; }
+
+.send-btn {
+    background: #007bff;
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* LinkedIn Pill */
+.social-pills { margin-bottom: 10px; }
+.linkedin-pill {
+    background: #0077b5;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- 7. FOOTER --- */
+.main-footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.main-footer a { font-weight: 700; color: #007bff; }
+
+/* --- 8. RESPONSIVE --- */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .hero, .contact-section { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .hero, .hardware, .jtag, .optimization, .contact-section, .languages, .test-systems, .code-card { grid-column: span 1; }
+    .hero { flex-direction: column; text-align: center; }
+    .form-row { flex-direction: column; }
+}
