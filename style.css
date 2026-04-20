@@ -272,3 +272,13 @@ body {
 .skill-icon:hover {
     transform: translateY(-3px);
 }
+
+.clickable {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.clickable:hover {
+    transform: translateY(-8px) scale(1.02);
+}
