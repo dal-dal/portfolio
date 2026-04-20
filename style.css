@@ -283,6 +283,10 @@ body {
     transform: translateY(-8px) scale(1.02);
 }
 
+.clickable {
+    display: block;
+}
+
 .project-page {
     max-width: 800px;
     margin: 100px auto;
