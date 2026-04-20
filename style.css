@@ -263,3 +263,12 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.skill-icon span {
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.skill-icon:hover {
+    transform: translateY(-3px);
+}
