@@ -282,3 +282,13 @@ body {
 .clickable:hover {
     transform: translateY(-8px) scale(1.02);
 }
+
+.project-page {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.project-page img {
+    margin-top: 20px;
+}
